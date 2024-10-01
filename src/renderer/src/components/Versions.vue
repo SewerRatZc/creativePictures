@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { reactive } from 'vue'
 
 const versions = reactive({ ...window.electron.process.versions })
@@ -10,4 +10,4 @@ const versions = reactive({ ...window.electron.process.versions })
     <li class="chrome-version">Chromium v{{ versions.chrome }}</li>
     <li class="node-version">Node v{{ versions.node }}</li>
   </ul>
-</template>
+</template> -->

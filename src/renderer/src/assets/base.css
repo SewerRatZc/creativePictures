@@ -24,7 +24,7 @@
 }
 
 :root {
-  --color-background: var(--ev-c-black);
+  --color-background: #FFA500;
   --color-background-soft: var(--ev-c-black-soft);
   --color-background-mute: var(--ev-c-black-mute);
 

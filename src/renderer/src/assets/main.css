@@ -44,7 +44,7 @@ code {
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 1.2em #6988e6aa);
+  filter: drop-shadow(0 0 1.2em #f59e1caa);
 }
 
 .creator {
@@ -126,7 +126,7 @@ code {
   overflow: hidden;
   align-items: center;
   border-radius: 22px;
-  background-color: #202127;
+  background-color: #fccb44;
   backdrop-filter: blur(24px);
 }
 

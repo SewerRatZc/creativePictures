@@ -55,6 +55,15 @@ const generateCosplayPhoto = async () => {
       alert('请先上传图片并生成 URL')
       return
     }
+    
+    // console.log({
+    //   model: 'wanx-style-cosplay-v1',
+    //   input: {
+    //     model_index: 1,
+    //     face_image_url: originalImageUrl.value,
+    //     template_image_url: referenceImageUrl.value
+    //   }
+    // });
 
     // 调用后端生成 Cosplay API，API 需要指定模型类型和输入参数
     const result = await window.api.generateCosplayPhoto({
@@ -65,6 +74,12 @@ const generateCosplayPhoto = async () => {
         template_image_url: referenceImageUrl.value // 动漫参考图的 URL
       }
     })
+
+    // const result = await window.api.generateCosplayPhoto({
+    //     face_image_url: originalImageUrl.value, // 人像图片的 URL
+    //     template_image_url: referenceImageUrl.value // 动漫参考图的 URL
+    // })
+
 
     photoUrl.value = result.photoUrl // 设置生成的写真 URL
   } catch (error) {

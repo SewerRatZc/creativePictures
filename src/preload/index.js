@@ -3,10 +3,10 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
 const api = {
-  generateCosplayPhoto: async (formData) => {
+  generateCosplayPhoto: (formData) => {
     return ipcRenderer.invoke('generate-cosplay-photo', formData)
   },
-  uploadFile: async (filePath) => {
+  uploadFile: (filePath) => {
     return ipcRenderer.invoke('upload-file', filePath)
   }
 }

@@ -18,6 +18,8 @@ const client = new OSS({
 
 const API_KEY = process.env.API_KEY
 
+
+
 // 上传文件到 OSS
 async function uploadToOss(filePath) {
   try {
@@ -73,17 +75,26 @@ function createWindow() {
   }
 }
 
-ipcMain.handle('generate-cosplay-photo', async (event, faceImageUrl, templateImageUrl) => {
+ipcMain.handle('generate-cosplay-photo', async (event,data) => {
+  
+  console.log('Received data:', JSON.stringify(data, null, 2));
+  const { model, input } = data;
+  const { model_index, face_image_url, template_image_url } = input;
+  
+  console.log(`Received model: ${model}`);
+  console.log(`Received face_image_url: ${face_image_url}`);
+  console.log(`Received template_image_url: ${template_image_url}`);
+
   try {
     // 发送生成任务的请求
     const taskCreationResponse = await axios.post(
       'https://dashscope.aliyuncs.com/api/v1/services/aigc/image-generation/generation',
       {
-        model: 'wanx-style-cosplay-v1', // 模型名称
+        model: model, // 模型名称
         input: {
-          model_index: 1, // 生成风格：1 代表 3D卡通
-          face_image_url: faceImageUrl, // 前端传递过来的原图URL
-          template_image_url: templateImageUrl // 前端传递的模板图URL
+          model_index: model_index, // 生成风格：1 代表 3D卡通
+          face_image_url: face_image_url, // 前端传递过来的原图URL
+          template_image_url: template_image_url // 前端传递的模板图URL
         }
       },
       {
@@ -118,7 +129,7 @@ ipcMain.handle('generate-cosplay-photo', async (event, faceImageUrl, templateIma
       }
 
       // 每隔几秒检查一次任务状态
-      await new Promise((resolve) => setTimeout(resolve, 5000))
+      // await new Promise((resolve) => setTimeout(resolve, 5000))
     }
 
     return { photoUrl: resultUrl } // 返回生成的图片URL

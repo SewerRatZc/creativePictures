@@ -22,7 +22,7 @@
 样例1
 
 原图 生成的图
-![3b3dfa81e5a83fa19a519f448f7ea94](picture\3b3dfa81e5a83fa19a519f448f7ea94.png)
+![3b3dfa81e5a83fa19a519f448f7ea94](picture/3b3dfa81e5a83fa19a519f448f7ea94.png)
 
 
 样例2

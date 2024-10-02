@@ -90,18 +90,20 @@ const generateCosplayPhoto = async () => {
 
 <template>
   <div class="container">
-    <h1>Cosplay Anime Photo Generator</h1>
+    <h1>以图生图</h1>
     <div>
+      <p>选择要生成特效的人像图</p>
       <input type="file" @change="handleFileUpload($event, 'original')" />
-      <label>上传人像原图</label>
+      <!-- <label>上传人像原图</label> -->
       <button @click="uploadOriginalImage">上传原图</button>
       <div v-if="originalImageUrl">
         原图 URL: <a :href="originalImageUrl" target="_blank">{{ originalImageUrl }}</a>
       </div>
     </div>
     <div>
+      <p>选择要生成的动漫特效参考图</p>
       <input type="file" @change="handleFileUpload($event, 'reference')" />
-      <label>上传卡通动漫参考图</label>
+      <!-- <label>上传卡通动漫参考图</label> -->
       <button @click="uploadReferenceImage">上传参考图</button>
       <div v-if="referenceImageUrl">
         参考图 URL: <a :href="referenceImageUrl" target="_blank">{{ referenceImageUrl }}</a>
@@ -109,7 +111,6 @@ const generateCosplayPhoto = async () => {
     </div>
 
     <button @click="generateCosplayPhoto">生成Cosplay写真</button>
-
     <div v-if="photoUrl">
       <h2>生成的写真</h2>
       <img :src="photoUrl" alt="Cosplay Photo" />

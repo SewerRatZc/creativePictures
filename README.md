@@ -21,22 +21,27 @@
 
 样例1
 
-原图 生成的图
+原图 
 ![3b3dfa81e5a83fa19a519f448f7ea94](picture/3b3dfa81e5a83fa19a519f448f7ea94.png)
-
-
+生成的图
+![b7ad91a34ad877ae503baf9e0316f72](picture/b7ad91a34ad877ae503baf9e0316f72.png)
 样例2
-
-
+原图
+![62cfb80d0576528742853eb62fd90ef](picture/62cfb80d0576528742853eb62fd90ef.jpg)
+生成的图
+![4b222984f58f5b7d6d257226432937a](picture/4b222984f58f5b7d6d257226432937a.jpg)
 
 样例3
-
-
-
+原图
+![81a288f1838bd8d928a29845772cc01](picture/81a288f1838bd8d928a29845772cc01.jpg)
+生成的图
+![d5eca01b3baf42faac49cb811430074](picture/d5eca01b3baf42faac49cb811430074.jpg)
 样例4
-
-
-
+原图
+![ef91bc0bad07fadde842d939a9ae4ae](picture/ef91bc0bad07fadde842d939a9ae4ae.png)
+生成的图
+![ef91bc0bad07fadde842d939a9ae4ae](picture/ef91bc0bad07fadde842d939a9ae4ae.png)
+    
  
 
 ## 文件结构
